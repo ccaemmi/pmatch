@@ -22,6 +22,11 @@
  */
 
 namespace qtype_pmatch;
+namespace Box\Spout\Reader\Common\Creator;
+
+use Box\Spout\Common\Exception\UnsupportedTypeException;
+use Box\Spout\Common\Type;
+use Box\Spout\Reader\ReaderInterface;
 
 defined('MOODLE_INTERNAL') || die();
 
