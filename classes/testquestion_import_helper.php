@@ -22,11 +22,6 @@
  */
 
 namespace qtype_pmatch;
-namespace Box\Spout\Reader\Common\Creator;
-
-use Box\Spout\Common\Exception\UnsupportedTypeException;
-use Box\Spout\Common\Type;
-use Box\Spout\Reader\ReaderInterface;
 
 defined('MOODLE_INTERNAL') || die();
 
@@ -140,7 +135,7 @@ abstract class qtype_pmatch_importer {
 abstract class qtype_pmatch_spout_importer {
 
     /**
-     * @var \Box\Spout\Reader\ReaderInterface $reader Spout Reader.
+     * @var \OpenSpout\Reader\ReaderInterface $reader Spout Reader.
      */
     public $reader;
 
@@ -250,7 +245,7 @@ class qtype_pmatch_csv_importer extends qtype_pmatch_spout_importer {
      *
      */
     public function __construct() {
-        $this->reader = \Box\Spout\Reader\Common\Creator\ReaderEntityFactory::createCSVReader();
+        $this->reader = \OpenSpout\Reader\Common\Creator\ReaderEntityFactory::createCSVReader();
         $this->reader->setShouldPreserveEmptyRows(true);
     }
 }
@@ -268,7 +263,7 @@ class qtype_pmatch_xlsx_importer extends qtype_pmatch_spout_importer {
      * qtype_pmatch_xlsx_importer constructor.
      */
     public function __construct() {
-        $this->reader = \Box\Spout\Reader\Common\Creator\ReaderEntityFactory::createXLSXReader();
+        $this->reader = \OpenSpout\Reader\Common\Creator\ReaderEntityFactory::createXLSXReader();
         $this->reader->setShouldPreserveEmptyRows(true);
     }
 }
@@ -286,7 +281,7 @@ class qtype_pmatch_ods_importer extends qtype_pmatch_spout_importer {
      * qtype_pmatch_xlsx_importer constructor.
      */
     public function __construct() {
-        $this->reader = \Box\Spout\Reader\Common\Creator\ReaderEntityFactory::createODSReader();
+        $this->reader = \OpenSpout\Reader\Common\Creator\ReaderEntityFactory::createODSReader();
         $this->reader->setShouldPreserveEmptyRows(true);
     }
 }
