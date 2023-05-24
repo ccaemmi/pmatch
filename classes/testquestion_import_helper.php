@@ -23,6 +23,11 @@
 
 namespace qtype_pmatch;
 namespace OpenSpout\Reader\Common\Creator;
+namespace OpenSpout\Common\Helper\Escaper;
+namespace OpenSpout\Reader\Common\Manager;
+
+use OpenSpout\Common\Entity\Cell;
+use OpenSpout\Common\Entity\Row;
 
 use OpenSpout\Common\Exception\UnsupportedTypeException;
 use OpenSpout\Common\Type;
