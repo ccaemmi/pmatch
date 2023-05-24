@@ -135,7 +135,7 @@ abstract class qtype_pmatch_importer {
 abstract class qtype_pmatch_spout_importer {
 
     /**
-     * @var \Box\Spout\Reader\ReaderInterface $reader Spout Reader.
+     * @var \OpenSpout\Reader\ReaderInterface $reader Spout Reader.
      */
     public $reader;
 
