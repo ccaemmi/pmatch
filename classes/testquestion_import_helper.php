@@ -23,6 +23,8 @@
 
 namespace qtype_pmatch;
 
+use Box\Spout\Reader\Common\Creator\ReaderEntityFactory;
+
 defined('MOODLE_INTERNAL') || die();
 
 /**
