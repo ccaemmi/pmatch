@@ -23,7 +23,7 @@
 
 namespace qtype_pmatch;
 
-use Box\Spout\Reader\Common\Creator\ReaderEntityFactory;
+use OpenSpout\Reader\Common\Creator\ReaderFactory;
 
 defined('MOODLE_INTERNAL') || die();
 
@@ -137,7 +137,7 @@ abstract class qtype_pmatch_importer {
 abstract class qtype_pmatch_spout_importer {
 
     /**
-     * @var \Box\Spout\Reader\ReaderInterface $reader Spout Reader.
+     * @var \OpenSpout\Reader\ReaderInterface $reader Spout Reader.
      */
     public $reader;
 
@@ -247,7 +247,7 @@ class qtype_pmatch_csv_importer extends qtype_pmatch_spout_importer {
      *
      */
     public function __construct() {
-        $this->reader = \Box\Spout\Reader\Common\Creator\ReaderEntityFactory::createCSVReader();
+        $this->reader = \OpenSpout\Reader\Common\Creator\ReaderFactory::createCSVReader();
         $this->reader->setShouldPreserveEmptyRows(true);
     }
 }
