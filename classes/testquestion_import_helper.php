@@ -24,6 +24,7 @@
 namespace qtype_pmatch;
 
 use OpenSpout\Reader\Common\Creator\ReaderFactory;
+use OpenSpout\Reader\Common\Creator\ReaderEntityFactory;
 
 defined('MOODLE_INTERNAL') || die();
 
@@ -283,7 +284,7 @@ class qtype_pmatch_ods_importer extends qtype_pmatch_spout_importer {
      * qtype_pmatch_xlsx_importer constructor.
      */
     public function __construct() {
-        $this->reader = \OpenSpout\Reader\ReaderFactory::createODSReader();
+        $this->reader = \OpenSpout\Reader\ReaderFactory::create(Type::ODS);
         $this->reader->setShouldPreserveEmptyRows(true);
     }
 }
