@@ -265,7 +265,7 @@ class qtype_pmatch_xlsx_importer extends qtype_pmatch_spout_importer {
      * qtype_pmatch_xlsx_importer constructor.
      */
     public function __construct() {
-        $this->reader = \Box\Spout\Reader\Common\Creator\ReaderEntityFactory::createXLSXReader();
+        $this->reader = \OpenSpout\Reader\Common\Creator\ReaderFactory::createXLSXReader();
         $this->reader->setShouldPreserveEmptyRows(true);
     }
 }
@@ -283,7 +283,7 @@ class qtype_pmatch_ods_importer extends qtype_pmatch_spout_importer {
      * qtype_pmatch_xlsx_importer constructor.
      */
     public function __construct() {
-        $this->reader = \Box\Spout\Reader\Common\Creator\ReaderEntityFactory::createODSReader();
+        $this->reader = \OpenSpout\Reader\Creator\ReaderFactory::createODSReader();
         $this->reader->setShouldPreserveEmptyRows(true);
     }
 }
