@@ -283,7 +283,7 @@ class qtype_pmatch_ods_importer extends qtype_pmatch_spout_importer {
      * qtype_pmatch_xlsx_importer constructor.
      */
     public function __construct() {
-        $this->reader = \OpenSpout\Reader\Creator\ReaderFactory::createODSReader();
+        $this->reader = \OpenSpout\Reader\ReaderFactory::createODSReader();
         $this->reader->setShouldPreserveEmptyRows(true);
     }
 }
