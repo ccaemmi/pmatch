@@ -23,8 +23,7 @@
 
 namespace qtype_pmatch;
 
-use OpenSpout\Reader\Common\Creator\ReaderFactory;
-use OpenSpout\Reader\Common\Creator\ReaderEntityFactory;
+use OpenSpout\Reader;
 
 defined('MOODLE_INTERNAL') || die();
 
